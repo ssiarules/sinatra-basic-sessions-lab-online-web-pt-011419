@@ -9,5 +9,5 @@ class App < Sinatra::Base
   post '/checkout' do 
     item = Item.new(params)
     session[:item_id] = item.id
-  end 
+  end
 end
