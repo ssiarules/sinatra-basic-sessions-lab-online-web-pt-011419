@@ -12,11 +12,7 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-
-    params = {
-      :item => "socks"
-    }
-    item = Item.new(params)
-    session[:item_id] = item.id
+    session["item"] = params[:item]
+   @session = session
   end
 end
